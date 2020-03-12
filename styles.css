@@ -1,0 +1,97 @@
+body .navbar {
+    background-color: #171414;
+}
+
+body .landing-page{
+    background-color: #171414;
+}
+
+.navbar{
+    display: flex;
+    background-color: #171414;
+    justify-content: space-between;
+    align-items: center;
+    margin: -8px -8px 0 -8px;
+ 
+    
+}
+
+.logo{
+    margin-left: 5%;
+    display: inline-block;
+    
+}
+.logo img{
+    width: 96px;
+    height: 53px;
+}
+
+.nav-links{
+    margin-right: 5%;
+    display: flex;
+    list-style: none;
+}
+
+.nav-item{
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: red;
+    margin-left: 20px;
+    background-color:#403e3e;
+   
+}
+.nav-item a{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    /*text-transform: uppercase;*/    
+}
+
+.nav-item:hover{
+    background-color: red;
+}
+
+
+.nav-item a:hover{
+    color:black;
+}
+.landing-page{
+    background: url(img/sirens.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    border: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-position: center center;
+    align-items: center;
+   
+}
+
+.landing-page .page-header{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    
+}
+
+
+.title{
+    display: flex;
+    font-weight: 700;
+    font-family: cursive;
+    
+    
+}
