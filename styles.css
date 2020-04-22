@@ -14,12 +14,11 @@ body .landing-page{
 }
 
 .navbar{
-    overflow: hidden;
     display: flex;
     background-color: #171414;
     justify-content: space-between;
     align-items: center;
-    margin: -8px -8px 0 -8px;
+    margin: 0;
  
     
 }
@@ -28,6 +27,7 @@ body .landing-page{
     position: fixed;
     top: 0;
     width: 100%;
+ 
 }
 
 
@@ -92,20 +92,22 @@ body .landing-page{
 .landing-page .page-header{
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 300px;
+    margin-bottom: 20%;
     padding-left: 15px;
     padding-right: 15px;
     color: white;
     background-color: black;
     border-radius: 10px;
     
+    
 }
-
 
 .title{
     display: flex;
     font-weight: 700;
-    font-family: cursive;
-    
-    
+    font-family: cursive;   
+}
+
+.row{
+    display: inline;
 }
