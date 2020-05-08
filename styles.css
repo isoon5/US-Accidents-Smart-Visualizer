@@ -109,7 +109,14 @@ body .landing-page{
         overflow: hidden;
         display: block;
     }
+
+    .logo img{
+        width: 70px;
+        height: 40px;
+    }
   }
+
+
 
 
 .navbar{
@@ -210,6 +217,33 @@ body .landing-page{
     font-family: cursive;   
 }
 
+
+@media screen and (max-width: 750px){
+    
+    .landing-page .page-header{
+        margin-bottom: 40%;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .title{
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 460px){
+
+    .landing-page .page-header{
+        text-align: center;
+        margin-bottom: 50%;
+        border-radius: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .title{
+        font-weight: 300;
+    }
+
+}
 
 .section    {
     background-color: #e6e6e6;
