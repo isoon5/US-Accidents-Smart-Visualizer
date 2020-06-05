@@ -3,29 +3,35 @@
 class Database{
 
 
-    private $hostName = "localhoast";
-    private $dbName = "";
+    private $hostName = "localhost";
+    private $dbName = "avi";
     private $username = "root";
-    private $password = "serverpass";
-    private &conn;
-    //private $pdo;
+    private $password = "serverpass"; 
+    private $conn;
+    
+    
+    public function connect() {
+    
+    $this->conn = null;
+    try{
 
+        $this->conn = new PDO('mysql:host='.$this->hostName.';dbname='.$this->dbName, 
+        $this->username, $this->password);
 
-    public function connect(){
-       
-        $this->conn = null;
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->conn->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
 
-        try{
-            
-            $this->conn = new PDO('mysql:host='. $this->host . ';dbname=' . $this->dbName, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        }catch(PDOException e){
-            echo 'Connection failed: '.$e->getMessage();
-        }
-
+    }catch(PDOException $e){
+        echo 'Connection failed: '.$e->getMessage();
+    }
         return $this->conn;
     }
+       
+
+      
+
+
+
 
 }
 
