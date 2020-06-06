@@ -1,5 +1,5 @@
 <?php
-
+header('Acces-Control-Allow-Origin: *');
 include_once $_SERVER['DOCUMENT_ROOT'].'/tw/config/Database.php';
 
 class State {

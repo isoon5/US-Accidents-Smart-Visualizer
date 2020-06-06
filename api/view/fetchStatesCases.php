@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
-header('Acces-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin:*');
 header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With");
-
+//header('Access-Control-Allow-Origin: http://localhost/tw/api/view/fetchStatesCases.php');
 
 include_once $_SERVER['DOCUMENT_ROOT'].'/tw/config/Database.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'/tw/models/State.php';
@@ -86,7 +86,7 @@ echo json_encode($us_state_accidents);
 
 
 ?>
-<script type="text/javascript">var jArray =<?php echo json_encode($us_state_accidents); ?>;</script>
+
 
 
 
