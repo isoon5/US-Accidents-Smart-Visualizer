@@ -160,8 +160,8 @@ body .landing-page{
     border-radius: 50px;
     border: 2px solid;
     border-color: red;
-    margin-left: 20px;
     background-color:#403e3e;
+    margin-left: 20px;
    
 }
 .nav-item a{
@@ -184,6 +184,9 @@ body .landing-page{
     color:black;
 }
 
+main{
+    width: 100vw;
+}
 
 .landing-page{
     background: url(img/sirens.jpg);
@@ -308,8 +311,9 @@ img{
     display: inline;
 }
 
-#context > div:nth-child(2) > p:nth-child(1){
+#context > div:nth-child(2) > p:nth-child(1), div.container:nth-child(4) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1){
     font-size: 22px;
+    padding-left: 20px;
     padding-right: 20px;
     padding-top: 25px;
 }
@@ -706,5 +710,121 @@ img{
     text-align: center;
 
 }
+
+#top-btn{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
+    border: 2px solid;
+    border-color: red;
+    background-color:#403e3e;
+    margin-left: 50vw;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+
+#top-btn:hover{
+
+float: none;
+color: white;
+text-decoration: none;
+display: block;
+text-align: left;
+background-color: red;
+color:black;
+border: 4px solid;
+border-color: #403e3e;
+border-radius: 10px;
+
+
+}
+
+div.container:nth-child(4) > div:nth-child(2) > div:nth-child(1) > ul:nth-child(2){
+
+    font-size: 22px;
+    padding-left: 5%;
+    padding-top: 25px;
+
+    text-align: left;
+
+
+}
+
+#geo-btn-png{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
+    border: 2px solid;
+    border-color: red;
+    background-color:#403e3e;
+
+    margin-bottom: 25px;
+    margin-top: 25px;
+ 
+}
+
+
+#geo-btn-png:hover{
+
+float: none;
+color: white;
+text-decoration: none;
+background-color: red;
+color:black;
+border: 4px solid;
+border-color: #403e3e;
+border-radius: 10px;
+
+
+}
+
+#geo-btn-csv{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
+    border: 2px solid;
+    border-color: red;
+    background-color:#403e3e;
+    margin-left: 35vw;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    
+}
+
+
+#geo-btn-csv:hover{
+
+float: none;
+color: white;
+text-decoration: none;
+background-color: red;
+color:black;
+border: 4px solid;
+border-color: #403e3e;
+border-radius: 10px;
+
+
+}
+
+html body main div#topic1.section div.container div#chart_div2 img{
+    display: none;
+}
+
 
 

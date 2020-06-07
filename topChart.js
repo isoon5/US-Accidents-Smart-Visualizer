@@ -1,6 +1,6 @@
 var array;
 
-var getJSON = function (url, callback) {
+var getJSON = function (url, callback, array) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
   xhr.responseType = 'json';
@@ -13,6 +13,7 @@ var getJSON = function (url, callback) {
     }
   };
   xhr.send();
+
 };
 
 console.log(array);
@@ -40,10 +41,6 @@ function getInputValue() {
     inputVal = document.getElementById('least').value;
   }
 
-
-
-  // Displaying the value
-
   return inputVal;
 
 }
@@ -61,7 +58,7 @@ setTimeout(function () {
       var data = google.visualization.arrayToDataTable([
 
         ['State', 'Number of accident'],
-        ['California', parseInt(array['CA'])],
+        ['California', parseInt(array["CA"])],
         ['Texas', parseInt(array["TX"])],
         ['Florida', parseInt(array["FL"])],
         ['South Carolina', parseInt(array["SC"])],
@@ -75,20 +72,33 @@ setTimeout(function () {
 
       var options = {
         title: 'Most Affected States by Car Accidents',
-        chartArea: { width: '40%', height: 700 },
+        chartArea: { width: '40%', height: 400 },
         hAxis: {
           title: 'Total Population',
-          minValue: 0
+          minValue: 0,
+          textPosition: 'out'
         },
         vAxis: {
-          title: 'State'
+          title: 'State',
+          
         },
 
       };
 
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
-      chart.draw(data, options);
+      var chart_div = document.getElementById('chart_div');
+
+      var top_chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+
+
+      top_chart.draw(data, options);
+      google.visualization.events.addListener(top_chart, 'ready', function () {
+        chart_div.innerHTML = '<img src="' + top_chart.getImageURI() + '">';
+        console.log(chart_div.innerHTML);
+      });
+      printTopChart(top_chart);
+
     }
   } else {
 
@@ -101,7 +111,7 @@ setTimeout(function () {
       var data = google.visualization.arrayToDataTable([
 
         ['State', 'Number of accident'],
-        ['Alaska', parseInt(array['AK'])],
+        ['Alaska', parseInt(array["AK"])],
         ['Puerto Rico', parseInt(array["PR"])],
         ['Virgin Islands', parseInt(array["VI"])],
         ['Hawaii', parseInt(array["HI"])],
@@ -110,12 +120,13 @@ setTimeout(function () {
         ['North Dakota', parseInt(array["ND"])],
         ['South Dakota', parseInt(array["SD"])],
         ['Montana', parseInt(array["MT"])]
+ 
 
       ]);
 
       var options = {
         title: 'Most Affected States by Car Accidents',
-        chartArea: { width: '40%', height: 700 },
+        chartArea: { width: '40%', height: 400 },
         hAxis: {
           title: 'Total Population',
           minValue: 0
@@ -123,16 +134,34 @@ setTimeout(function () {
         vAxis: {
           title: 'State'
         },
+        width: Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
 
       };
+      var chart_div = document.getElementById('chart_div');
 
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      var top_chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
-      chart.draw(data, options);
+
+      top_chart.draw(data, options);
+
+      google.visualization.events.addListener(top_chart, 'ready', function () {
+        chart_div.innerHTML = '<img src="' + top_chart.getImageURI() + '">';
+        console.log(chart_div.innerHTML);
+      });
+      printTopChart(top_chart);
+
     }
-
-
 
   }
 
+
+
 }, 10);
+
+
+function printTopChart(top_chart) {
+  document.getElementById('png-top-chart').outerHTML = '<a id  = "top-btn" href="' + top_chart.getImageURI() + '" download="top_char.png" target="_blank"">Convert to PNG</a>';
+ 
+}
+
