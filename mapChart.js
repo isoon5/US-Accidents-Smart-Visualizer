@@ -126,7 +126,7 @@ getJSON('http://localhost/tw/api/view/fetchStatesCases.php',
    
   geo_chart.draw(geo_data, options);
   google.visualization.events.addListener(geo_chart, 'select', selectHandler);
-  google.visualization.events.addListener(geo_chart, 'ready', function () {
+  google.visualization.events.addListener(geo_chart, 'ready', function () { 
     chart_div2.innerHTML = '<img src="' + geo_chart.getImageURI() + '">';
     console.log(chart_div2.innerHTML);
     printGeoChart(geo_chart);
@@ -139,7 +139,7 @@ getJSON('http://localhost/tw/api/view/fetchStatesCases.php',
         csv += '\n'; 
         csv += ar[i]+', '
     }
-      console.log(csv);
+  
       document.getElementById('csv-geo-chart').outerHTML = '<a id  = "geo-btn-png" href="' + csv + '" download="USA_MAP.csv" target="_blank">Convert to CSV</a>';
     
    

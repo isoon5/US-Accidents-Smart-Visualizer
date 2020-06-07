@@ -68,7 +68,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
             <div class="container">
                 <div class="row">
-                    <h2 class="section-title"> Find Out What Are The Leading Causes For Most Car Accidents
+                    <h2 class="section-title">Find out which are the safest or most dangerous states in America
                     </h2>
                 </div>
                 <div class="row" id="context">
@@ -77,6 +77,8 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                     </div>
                     <div id="column-text">
                         <p>The number of fatal car crashes in the United States has declined, at least partially due to better safety measures and improved road design. In 2014, 32,675 Americans died in car crashes, roughly 10,000 fewer than there were In 2004.Still, traffic accidents remain a serious problem in this country, and in some states the issue is much more severe than in others.Nationwide, there were 10.2 deaths for every 100,000 people in 2014. In Wyoming, the most dangerous state for drivers, there were 25.7 deaths for every 100,000 people.
+                            <br>
+                            <br>However between 2016 and 2019 things have changed.
                             <br>
                             <br>
                             <br> Below you can see a chart with the most/least affected states of car accidents between February 2016 and December 2019 </p>
@@ -98,6 +100,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
             <div id="chart_div"></div>
             <div id='png-top-chart'></div>
+            <div id='csv-top-chart'></div>
 
             <div class="container">
                 <div class="row">

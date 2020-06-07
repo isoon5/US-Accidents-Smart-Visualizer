@@ -55,7 +55,7 @@ setTimeout(function () {
 
     function drawBasic() {
 
-      var data = google.visualization.arrayToDataTable([
+      arr = [
 
         ['State', 'Number of accident'],
         ['California', parseInt(array["CA"])],
@@ -68,8 +68,11 @@ setTimeout(function () {
         ['Michigan', parseInt(array["MI"])],
         ['Illinois', parseInt(array["IL"])]
 
-      ]);
+      ];
 
+      var data = google.visualization.arrayToDataTable(arr);
+
+    
       var options = {
         title: 'Most Affected States by Car Accidents',
         chartArea: { width: '40%', height: 400 },
@@ -98,6 +101,17 @@ setTimeout(function () {
         console.log(chart_div.innerHTML);
       });
       printTopChart(top_chart);
+      var t_csv  = "data:text/csv;charset=utf-8,";
+      for(i = 1; i < arr.length; i++){
+        
+        console.log(arr[i]);
+          t_csv += '\n'; 
+          t_csv += arr[i]+', '
+      }
+      console.log(t_csv);
+      document.getElementById('csv-top-chart').outerHTML = '<a id  = "top-btn-csv" href="' + t_csv + '" download="TOP_Chart.csv" target="_blank">Convert to CSV</a>'
+        
+
 
     }
   } else {
@@ -107,22 +121,22 @@ setTimeout(function () {
     google.charts.setOnLoadCallback(drawBasic);
 
     function drawBasic() {
-
-      var data = google.visualization.arrayToDataTable([
+       arr = [
 
         ['State', 'Number of accident'],
         ['Alaska', parseInt(array["AK"])],
-        ['Puerto Rico', parseInt(array["PR"])],
-        ['Virgin Islands', parseInt(array["VI"])],
         ['Hawaii', parseInt(array["HI"])],
-        ['Guam', parseInt(array["GU"])],
-        ['American Samao', parseInt(array["AS"])],
         ['North Dakota', parseInt(array["ND"])],
         ['South Dakota', parseInt(array["SD"])],
-        ['Montana', parseInt(array["MT"])]
+        ['Wyoming', parseInt(array["WY"])],
+        ['Montana', parseInt(array["MT"])],
+        ['Arkansas', parseInt(array["AR"])],
+        ['Idaho', parseInt(array["ID"])],
+        ['Maine', parseInt(array["ME"])]
  
 
-      ]);
+      ];
+      var data = google.visualization.arrayToDataTable(arr);
 
       var options = {
         title: 'Most Affected States by Car Accidents',
@@ -147,9 +161,27 @@ setTimeout(function () {
 
       google.visualization.events.addListener(top_chart, 'ready', function () {
         chart_div.innerHTML = '<img src="' + top_chart.getImageURI() + '">';
-        console.log(chart_div.innerHTML);
+      ;
+    
+   
+
+        
       });
       printTopChart(top_chart);
+
+      
+      var t_csv  = "data:text/csv;charset=utf-8,";
+      for(i = 1; i < arr.length; i++){
+        
+        console.log(arr[i]);
+          t_csv += '\n'; 
+          t_csv += arr[i]+', '
+      }
+      console.log(t_csv);
+      document.getElementById('csv-top-chart').outerHTML = '<a id  = "top-btn-csv" href="' + t_csv + '" download="TOP_Chart.csv" target="_blank">Convert to CSV</a>'
+        
+
+      
 
     }
 
