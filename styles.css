@@ -940,3 +940,15 @@ div.container:nth-child(3){
 }
 
 
+#piechart_3d, #donutchart, #piechart{
+   
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 900px;
+    height: 500px;
+    margin-top:100px
+  
+}
+

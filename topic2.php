@@ -22,6 +22,9 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
     <title>US Accidents Smart Visualizer</title>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+
 
 </head>
 
@@ -82,7 +85,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container-id">
                 <div class="row">
 
                     <h2 class="section-title">US Car Accident Statistics: What factors causes the most accidents</h2>
@@ -119,7 +122,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                                 <option value="MA">Massachusetts</option>
                                 <option value="MI">Michigan</option>
                                 <option value="MN">Minnesota</option>
-                                <option value="MS">Mississippi/option>
+                                <option value="MS">Mississippi</option>
                                 <option value="MO">Missouri</option>
                                 <option value="MT">Montana</option>
                                 <option value="NE">Mebraska</option>
@@ -151,19 +154,27 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
                             <label for="causes">Choose a Cause:</label>
                             <select id="causes" name="causes">
-                                <option value="temp">Temperature</option>
-                                <option value="humid">Humidity</option>
-                                <option value="pressure">Atmospheric Pressure</option>
-                                <option value="visib">Visibility</option>
-                                <option value="wind">Wind Speed</option>
-                                <option value="weather">Weather</option>
-                                <option value="time">Day Time / Night Time</option>
+                                <option value="temp" onclick="location.reload()">Temperature</option>
+                                <option value="humid" onclick="location.reload()">Humidity</option>
+                                <option value="pressure"onclick="location.reload()">Atmospheric Pressure</option>
+                                <option value="visib"onclick="location.reload()">Visibility</option>
+                                <option value="wind"onclick="location.reload()">Wind Speed</option>
+                                <option value="weather"onclick="location.reload()">Weather</option>
+                                <option value="time"onclick="location.reload()">Day Time / Night Time</option>
                             </select>
 
                             <input id="submit" type="button" value="submit" onclick="getInput()" />
                         </form>
                     </div>
                 </div>
+
+             
+                <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+                <div id="donutchart" style="width: 900px; height: 500px;"></div>
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+                <div id="columnchart_values" style="width: 100vw; height: 300px;"></div>
+
+
             </div>
 
 

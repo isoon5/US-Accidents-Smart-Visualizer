@@ -29,7 +29,7 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)){
     $arrayTemp = array(
 
         'name' => $state,
-        'daytime' => $dayTime,
+        'dayTime' => $dayTime,
         'nightTime' => $nightTime
         
        
