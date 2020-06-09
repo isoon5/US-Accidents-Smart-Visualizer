@@ -13,7 +13,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/d158196d49.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -34,8 +34,8 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
         </a>
         <ul class="nav-links">
             <li class="nav-item"><a href="#topic1">Most affected states</a></li>
-            <li class="nav-item"><a href=#topic2>Button 2 longer text</a></li>
-            <li class="nav-item"><a href=#topic3>Button 3 longer text</a></li>
+            <li class="nav-item"><a href="#topic2">Weather and accidents</a></li>
+            <li class="nav-item"><a href="#topic3">Button 3 longer text</a></li>
 
         </ul>
 
@@ -44,8 +44,8 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
             <div class="dropdown-content">
                 <a href="#topic1">Most affected states</a>
-                <a href=#topic2>Button 2 longer text</a>
-                <a href=#topic3>Button 3 longer text</a>
+                <a href="#topic2">Weather and accidents</a>
+                <a href="#topic3">Button 3 longer text</a>
 
 
                 <!--More buttons here-->
@@ -77,6 +77,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                     </div>
                     <div id="column-text">
                         <p>The number of fatal car crashes in the United States has declined, at least partially due to better safety measures and improved road design. In 2014, 32,675 Americans died in car crashes, roughly 10,000 fewer than there were In 2004.Still, traffic accidents remain a serious problem in this country, and in some states the issue is much more severe than in others.Nationwide, there were 10.2 deaths for every 100,000 people in 2014. In Wyoming, the most dangerous state for drivers, there were 25.7 deaths for every 100,000 people.
+                        
                             <br>
                             <br>However between 2016 and 2019 things have changed.
                             <br>
@@ -101,6 +102,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
             <div id="chart_div"></div>
             <div id='png-top-chart'></div>
             <div id='csv-top-chart'></div>
+            <div id='svg-top-chart'></div>
 
             <div class="container">
                 <div class="row">
@@ -131,6 +133,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
             <div class = "buttons">
                 <div id='png-geo-chart'></div>
                 <div id='csv-geo-chart'></div>
+                <div id='svg-geo-chart'></div>
             </div> 
 
                 <div id="chart_div2" style="width: 0px; height: 0px;"></div>
@@ -149,10 +152,10 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 
 
-<script src="myscripts.js"></script>
-<script src="topChart.js"></script>
-<script src="mapChart.js"></script>
-<script src="export.js"></script>
+<script src="./js/myscripts.js"></script>
+<script src="./js/topChart.js"></script>
+<script src="./js/mapChart.js"></script>
+
 
 
 

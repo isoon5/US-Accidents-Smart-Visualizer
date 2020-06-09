@@ -325,6 +325,14 @@ img{
 }
 
 
+div.container:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(1){
+
+    font-size: 22px;
+    padding-right: 20px;
+    padding-top: 25px;
+}
+
+
 
 @media screen and (max-width: 1400px){
     .landing-page{
@@ -754,6 +762,8 @@ div.container:nth-child(4) > div:nth-child(2) > div:nth-child(1) > ul:nth-child(
 
 }
 
+
+
 #geo-btn-png{
     display: inline-block;
     padding: 10px 30px;
@@ -852,9 +862,81 @@ border-radius: 10px;
 
 }
 
+#geo-btn-svg{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
+    border: 2px solid;
+    border-color: red;
+    background-color:#403e3e;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    
+}
+
+
+#geo-btn-svg:hover{
+
+float: none;
+color: white;
+text-decoration: none;
+background-color: red;
+color:black;
+border: 4px solid;
+border-color: #403e3e;
+border-radius: 10px;
+
+
+}
+
+#top-btn-svg{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
+    border: 2px solid;
+    border-color: red;
+    background-color:#403e3e;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    
+}
+
+
+#top-btn-svg:hover{
+
+float: none;
+color: white;
+text-decoration: none;
+background-color: red;
+color:black;
+border: 4px solid;
+border-color: #403e3e;
+border-radius: 10px;
+
+
+}
+
 html body main div#topic1.section div.container div#chart_div2 img{
     display: none;
 }
 
+
+
+
+/*  TOPIC2 */
+
+div.container:nth-child(3){
+    margin-top: 180px;
+}
 
 

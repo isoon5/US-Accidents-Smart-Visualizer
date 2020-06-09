@@ -14,57 +14,57 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/tw/models/State.php';
  $db = $database->connect();
 
  $us_state_accidents = array(
-    'AL'=> 0,
     'AK'=> 0,
-    'AS'=> 0,
-    'AZ'=> 0,
+    'AL'=> 0,
     'AR'=> 0,
+    'AZ'=> 0,
     'CA'=> 0,
     'CO'=> 0,
     'CT'=> 0,
     'DE'=> 0,
-    'DC'=> 0,
-    'FM'=> 0,
     'FL'=> 0,
     'GA'=> 0,
-    'GU'=> 0,
     'HI'=> 0,
+    'IA'=> 0,
     'ID'=> 0,
     'IL'=> 0,
     'IN'=> 0,
-    'IA'=> 0,
     'KS'=> 0,
     'KY'=> 0,
     'LA'=> 0,
-    'ME'=> 0,
-    'MH'=> 0,
-    'MD'=> 0,
     'MA'=> 0,
+    'MD'=> 0,
+    'ME'=> 0,
     'MI'=> 0,
     'MN'=> 0,
-    'MS'=> 0,
     'MO'=> 0,
+    'MS'=> 0,
     'MT'=> 0,
+    'NC'=> 0,
+    'ND'=> 0,
     'NE'=> 0,
-    'NV'=> 0,
     'NH'=> 0,
     'NJ'=> 0,
     'NM'=> 0,
+    'NV'=> 0,
     'NY'=> 0,
-    'NC'=> 0,
-    'ND'=> 0,
-    'MP'=> 0,
     'OH'=> 0,
     'OK'=> 0,
     'OR'=> 0,
     'PA'=> 0,
-    'PR'=> 0,
     'RI'=> 0,
     'SC'=> 0,
     'SD'=> 0,
     'TN'=> 0,
     'TX'=> 0,
-    'UT'=> 0
+    'UT'=> 0,
+    'VA'=> 0,
+    'VT'=> 0,
+    'WA'=> 0,
+    'WI'=> 0,
+    'WV'=> 0,
+    'WY'=> 0,
+
 );
 
 //set_time_limit(500);
@@ -76,8 +76,7 @@ foreach($us_state_accidents as $key => $value){
 $result = $state->getStateAccidentFreq($key);
 
  $row = $result->fetchAll(PDO::FETCH_COLUMN);
- $count = $row;
- $us_state_accidents[$key] = $count;
+ $us_state_accidents[$key] = $row;
  
 
 }
