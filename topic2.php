@@ -1,13 +1,3 @@
-<?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Origin');
-header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With");
-
-//include_once $_SERVER['DOCUMENT_ROOT'].'/tw/api/view/fetchStatesCases.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +13,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
     <link rel="icon" href="img/logo.png" type="image/x-icon">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  
+
 
 
 </head>
@@ -36,9 +26,9 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
             <img src="img/logo.png" alt="logo">
         </a>
         <ul class="nav-links">
-            <li class="nav-item"><a href="#topic1">Most affected states</a></li>
-            <li class="nav-item"><a href=#topic2>Weather and accidents</a></li>
-            <li class="nav-item"><a href=#topic3>Button 3 longer text</a></li>
+            <li class="nav-item"><a href="./topic1.php">Most affected states</a></li>
+            <li class="nav-item"><a href="./topic2.php">Weather and accidents</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
 
         </ul>
 
@@ -46,9 +36,9 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
             <button class="drop-button"><i class="fas fa-bars"></i></button>
 
             <div class="dropdown-content">
-                <a href="#topic1">Most affected states</a>
-                <a href=#topic2>Weather and accidents</a>
-                <a href=#topic3>Button 3 longer text</a>
+                <a href="topic1.php">Most affected states</a>
+                <a href="topic2.php">Weather and accidents</a>
+                <a href="about.html">About</a>
 
 
                 <!--More buttons here-->
@@ -85,10 +75,10 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                 </div>
             </div>
 
-            <div class="container-id">
+            <div class="container-id" style="height: 850px">
                 <div class="row">
 
-                    <h2 class="section-title">US Car Accident Statistics: What factors causes the most accidents</h2>
+                    <h2 class="section-title">US Car Accident Statistics: What factors cause the most accidents</h2>
 
                 </div>
 
@@ -156,23 +146,30 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                             <select id="causes" name="causes">
                                 <option value="temp" onclick="location.reload()">Temperature</option>
                                 <option value="humid" onclick="location.reload()">Humidity</option>
-                                <option value="pressure"onclick="location.reload()">Atmospheric Pressure</option>
-                                <option value="visib"onclick="location.reload()">Visibility</option>
-                                <option value="wind"onclick="location.reload()">Wind Speed</option>
-                                <option value="weather"onclick="location.reload()">Weather</option>
-                                <option value="time"onclick="location.reload()">Day Time / Night Time</option>
+                                <option value="pressure" onclick="location.reload()">Atmospheric Pressure</option>
+                                <option value="visib" onclick="location.reload()">Visibility</option>
+                                <option value="wind" onclick="location.reload()">Wind Speed</option>
+                                <option value="weather" onclick="location.reload()">Weather</option>
+                                <option value="time" onclick="location.reload()">Day Time / Night Time</option>
                             </select>
 
-                            <input id="submit" type="button" value="submit" onclick="getInput()" />
+                            <input id="submit" type="button" value="Submit" onclick="getInput()" />
                         </form>
                     </div>
                 </div>
 
-             
+                <div class="buttons">
+                    <div id='png-pie-chart'></div>
+                    <div id='csv-pie-chart'></div>
+                    <div id='svg-pie-chart'></div>
+                </div>
+
                 <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
                 <div id="donutchart" style="width: 900px; height: 500px;"></div>
                 <div id="piechart" style="width: 900px; height: 500px;"></div>
                 <div id="columnchart_values" style="width: 100vw; height: 300px;"></div>
+
+
 
 
             </div>
@@ -183,7 +180,11 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
     </main>
 
-
+    <footer>
+        <p>Copyright ©</p>
+        <p></p>
+        <p>All rights reserved</p>
+    </footer>
 </body>
 
 

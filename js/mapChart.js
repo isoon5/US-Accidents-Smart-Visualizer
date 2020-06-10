@@ -130,7 +130,7 @@ setTimeout(function () {
     google.visualization.events.addListener(geo_chart, 'select', selectHandler);
     google.visualization.events.addListener(geo_chart, 'ready', function () {
       chart_div2.innerHTML = '<img src="' + geo_chart.getImageURI() + '">';
-      console.log(chart_div2.innerHTML);
+    
       printGeoChart(geo_chart);
       geoCsv(ar);
       geoSvg();
@@ -147,7 +147,7 @@ setTimeout(function () {
 }, 10);
 
 function printGeoChart(geo_chart) {
-  document.getElementById('png-geo-chart').outerHTML = '<a id  = "geo-btn-csv" href="' + geo_chart.getImageURI() + '" download="USA_MAP.png" target="_blank">Convert to PNG</a>';
+  document.getElementById('png-geo-chart').outerHTML = '<a id  = "geo-btn-png" href="' + geo_chart.getImageURI() + '" download="USA_MAP.png" target="_blank">Convert to PNG</a>';
 }
 
 
@@ -161,7 +161,7 @@ function geoCsv(ar) {
     csv += ar[i] + ', '
   }
 
-  document.getElementById('csv-geo-chart').outerHTML = '<a id  = "geo-btn-png" href="' + csv + '" download="USA_MAP.csv" target="_blank">Convert to CSV</a>';
+  document.getElementById('csv-geo-chart').outerHTML = '<a id  = "geo-btn-csv" href="' + csv + '" download="USA_MAP.csv" target="_blank">Convert to CSV</a>';
 
 }
 

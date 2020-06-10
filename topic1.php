@@ -1,12 +1,4 @@
-<?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Origin');
-header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With");
 
-//include_once $_SERVER['DOCUMENT_ROOT'].'/tw/api/view/fetchStatesCases.php';
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +25,9 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
             <img src="img/logo.png" alt="logo">
         </a>
         <ul class="nav-links">
-            <li class="nav-item"><a href="#topic1">Most affected states</a></li>
-            <li class="nav-item"><a href="#topic2">Weather and accidents</a></li>
-            <li class="nav-item"><a href="#topic3">Button 3 longer text</a></li>
+            <li class="nav-item"><a href="./topic1.php">Most affected states</a></li>
+            <li class="nav-item"><a href="./topic2.php">Weather and accidents</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
 
         </ul>
 
@@ -43,9 +35,9 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
             <button class="drop-button"><i class="fas fa-bars"></i></button>
 
             <div class="dropdown-content">
-                <a href="#topic1">Most affected states</a>
-                <a href="#topic2">Weather and accidents</a>
-                <a href="#topic3">Button 3 longer text</a>
+                <a href="./topic1.php">Most affected states</a>
+                <a href="./topic2.php">Weather and accidents</a>
+                <a href="./about.html">About</a>
 
 
                 <!--More buttons here-->
@@ -81,21 +73,17 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                             <br>
                             <br>However between 2016 and 2019 things have changed.
                             <br>
-                            <br>
-                            <br> Below you can see a chart with the most/least affected states of car accidents between February 2016 and December 2019 </p>
-
-                        <form id="topChartForm">
-
-                            <input type="radio" id="most" name="view" value="most" checked onclick="location.reload();">
-                            <label for="most"><b>Top 10 most affected states</b></label>
-                            <input type="radio" id="least" name="view" value="least" onclick="location.reload();">
-                            <label for="female"><b>Top 10 least affected states</b></label><br>
-
-                        </form>
-
-
+                            <br> <span>Below you can see a chart with the most/least affected states of car accidents between February 2016 and December 2019</span></p> 
 
                     </div>
+                    <form id="topChartForm">
+
+<input type="radio" id="most" name="view" value="most" checked onclick="location.reload();">
+<label for="most"><b>Top 10 most affected states</b></label>
+<input type="radio" id="least" name="view" value="least" onclick="location.reload();">
+<label for="least"><b>Top 10 least affected states</b></label><br>
+
+</form>
                 </div>
             </div>
 
@@ -114,7 +102,7 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                 <div class="row" id="context">
                     <div id="column-text">
                         <p>A statistical projection of traffic fatalities for the first quarter of 2019 shows that an estimated 8,110 people died in motor vehicle traffic crashes. This is a similar figure to the 8,200 deaths that were estimated for the first quarter in 2018.
-                            For more information, see the <a href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812783">NHTSA Traffic Safety Facts, 2019.</a></p>
+                            For more information, see the <a target="_blank" href="https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812783">NHTSA Traffic Safety Facts, 2019.</a></p>
                         <ul>
                             <li>Over 37,000 people die in road accidents each year</li>
                             <li>2.35 million are injured or disabled by their accidents</li>
@@ -129,15 +117,17 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
                     </div>
                 </div>
 
-                <div id="geochart" style="width: 100vw; height: 500px;"></div>
+    
+                <div id="chart_div2" style="width: 0px; height: 0px;"></div>
+            </div>
+
+            <div id="geochart" style="width: 100vw; height: 500px;"></div>
             <div class = "buttons">
                 <div id='png-geo-chart'></div>
                 <div id='csv-geo-chart'></div>
                 <div id='svg-geo-chart'></div>
             </div> 
 
-                <div id="chart_div2" style="width: 0px; height: 0px;"></div>
-            </div>
 
         </div>
 
@@ -147,6 +137,11 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
     </main>
 
+    <footer>
+        <p>Copyright ©</p>
+        <p></p>
+        <p>All rights reserved</p>
+    </footer>
 
 </body>
 
