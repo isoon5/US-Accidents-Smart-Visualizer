@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <title>Documentation</title>
+</head>
+
+<body>
+
+    <p><b>Project:</b> AVi (US Accidents Smart Visualizer)</p>
+    <br>
+    <p><b>Contribuitors:</b> Scurtu Claudiu-Constantin</p>
+    <br>
+    <p><b>Coordinator: Panu Andrei</b></p>
+    <br>
+    <p><b>Theme: </b>Sa se dezvolte un instrument Web de vizualizare flexibila a datelor vizand accidentele din SUA, pe baza unui API REST/GraphQL propriu. Statisticile si vizualizarile generate – minim 3 maniere + redari cartografice pe baza unor servicii
+        Web de profil – vor putea fi exportate in formatele CSV, PNG si SVG. Sistemul va oferi suport si pentru cautarea multi-criteriala de incidente raportate. Resurse suplimentare despre vizualizarea datelor: https://profs.info.uaic.ro/~busaco/teach/courses/cliw/web-film.html#week4.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>Website Description:</b> Website-ul pune la dispozitite utilizatorului o suita de charturi google, populate cu date relatate la Accidentele de masini din Statele Unite ale Americii. Datele colectate fac parte din perioada 2016-2019.<br> Criteriile
+        afisate in chart-uri sunt: numarul de accidente din fiecare din cele 50 de state si cauzele/factorii ce cauzeaza aceste accidente.
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>Interface:</b> Design-ul este unul simplist, fara feature-uri nefolositoare. Website-ul este responsive, prin urmare poate fi vizionat pe orice tip de ecran.<br> Acest lucru a fost realizat prin media queries in CSS.Butoanele sunt vizibile si intuitive,
+        la fel ca si navbar-ul care nu este incarcat si este locat in partea de sus a paginii.<br> Pe ecranele mai inguste butoanele navbar-ului vor fi gasite intr-un dropdown-menu.
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>MVC</b></p>
+    <p>Model: Se ocupa de interogarea bazei de date cu queri-uri relevante cerintelor utilizatorului.</p>
+    <img src="./img/doc_model.JPG">
+    <p>View: Returneaza datele din baza de date in format JSON pentru a putea fi reprezentate grafic.</p>
+    <img src="./img/doc_view.JPG">
+    <p>Controller: Configureaza conexiunea cu baza de date.</p>
+    <img src="./img/doc_controller.JPG">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>Database</b></p>
+    <p>Baza de date a fost creata in phpmyadmin, unde s-au importat cu ajutorul scripturilor sql datele, care au fost parsate din .csv-ul initial.</p>
+    <img src="./img/doc_import.JPG">
+    <p>Pe langa tabela mare(importata din .csv), s-au mai creat inca 2 tabele doar cu datele relevante pentru fiecare chart in parte, pentru a nu fi nevoiti sa luam datele din tabela mare si pentru a micsora timpul de asteptare a datelor.</p>
+    <img src="./img/doc_states_import.JPG">
+    <img src="./img/doc_weather_import.JPG">
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>Used Technologies:</b></p>
+    <ul>
+        <p>Front-end</p>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <p> - a fost folosit pentru a manipula chart-urile si a prelua anumite input-uri de la user, cat si pentru cateva efecte(cum ar fi sticky navbar on scroll)</p>
+        <li>Google Charts API</li>
+        <p> - acest tool a fost folosit pentru a reprezenta vizual statisticile si datele asigurate de partea de backend</p>
+        <img src="img/doc_charts.JPG">
+        <li>AJAX</li>
+        <p>- s-au folosit request-uri cu ajutorul obiectului XMLHttpRequest pentru a sincroniza partea de front cu partea de back. </p>
+        <p>- au fost trimise input-urile user-ului catre server. </p>
+        <p>- au fost aduse datele relevante din partea de backend </p>
+        <img src="img/ajax1.JPG">
+        <img src="img/ajax2.JPG">
+        <br>
+        <p>Back-end</p>
+        <li>PHP</li>
+        <p> - a fost folosit pentru a gestiona baza de date (prin obiectul PDO)</p>
+        <p> - a fost folosit pentru a aduce date relevante in format json</p>
+        <li>MySql</li>
+        <p> - s-au folosit scripturi pentru a crea si popula tabelele. </p>
+
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <b>Bibliography:</b>
+    <p>https://developer.mozilla.org/en-US/docs/Web/JavaScript</p>
+    <p>https://www.php.net/manual/ro/book.pdo.php</p>
+    <p>https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest</p>
+    <p>https://youtu.be/OEWXbpUMODk</p>
+    <p>https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><b>GitHub Repo </b><a href="https://github.com/isoon5/US-Accidents-Smart-Visualizer" target="_blank">here.</a></p>
+
+
+</body>
+
+
+</html>

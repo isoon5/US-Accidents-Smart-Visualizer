@@ -1,70 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta charset="utf-8"> 
-        <link rel = "stylesheet" href="styles.css">
-        <script src="https://kit.fontawesome.com/d158196d49.js" crossorigin="anonymous"></script>
-        <title>US Accidents Smart Visualizer</title>
-        <link rel="icon" href="img/logo.png" type="image/x-icon">
-        
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d158196d49.js" crossorigin="anonymous"></script>
+    <title>US Accidents Smart Visualizer</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+
+</head>
 
 
-    <body>
-       
-        <nav class="navbar" id="myNavbar">
-            <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="logo">
-            </a>
-            <ul class="nav-links">
-                <li class="nav-item"><a href="./topic1.php">Most affected states</a></li>
-                <li class="nav-item"><a href="./topic2.php">Weather and accidents</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-    
-            </ul>
-    
-            <div class="dropdown-menu">
-                <button class="drop-button"><i class="fas fa-bars"></i></button>
-    
-                <div class="dropdown-content">
-                    <a href="topic1.php">Most affected states</a>
-                    <a href="topic2.php">Weather and accidents</a>
-                    <a href="/about.html">About</a>
-    
-    
-                    <!--More buttons here-->
-    
-                </div>
-    
+<body>
+
+    <nav class="navbar" id="myNavbar">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
+        </a>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="./topic1.php">Most affected states</a></li>
+            <li class="nav-item"><a href="./topic2.php">Weather and accidents</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
+
+        </ul>
+
+        <div class="dropdown-menu">
+            <button class="drop-button"><i class="fas fa-bars"></i></button>
+
+            <div class="dropdown-content">
+                <a href="topic1.php">Most affected states</a>
+                <a href="topic2.php">Weather and accidents</a>
+                <a href="/about.html">About</a>
+
+
+
             </div>
-    
-        </nav>
-    
-        <div class="topic-landing-page">
-            <img src="img/jam.jpg">
-    
+
         </div>
 
-        <main>
-      
-            
+    </nav>
 
-        
-        </main>   
-        
+    <div class="topic-landing-page">
+        <img src="img/jam.jpg">
+
+    </div>
+
+    <body>
+        <div id="topic1" class="section">
+
+            <div class="container-about">
+                <div class="row">
+                    <h2 class="section-title">AVi - US Accidents Smart Visualizer
+                    </h2>
+                </div>
+                <div class="row">
+                    <div id="column-text">
+                        <p>
+                            The AVi (US Accidents Smart Visualizer) webpage shows to the users data collection regardind USA car accidents between 2016-2019. The website delivers a variaty of charts with relevant stats of accidents.
+                            <br>
+                            <br><b> Raw data can be collected from <a target="_blank" href="https://www.kaggle.com/sobhanmoosavi/us-accidents">here.</b></a>
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="column-text">
+
+                        <h3>The Interface</h3>
+                        <p style="font-family: Consolas, monaco, monospace;">
+                            -is very simple and friendly, the website is responsive so it can be viewed from any screen, from mobile phones to laptops/monitors-
+                        </p>
+                        <br>
+                        <br>
+                        <h3>Server-side</h3>
+                        <p style="font-family: Consolas, monaco, monospace;">-purpose is to get requests from users and retrieve the desired data in form of charts-<br> -the server will also convert the charts to different extensions when the user will request it-</p>
+
+
+                        <h3>Used Technologies</h3>
+                        <p style="font-family: Consolas, monaco, monospace;">-<b>FRONTEND:</b> HTML, CSS, JAVASCRIPT, Google Charts-<br>-
+                            <b>BACKEND:</b> - PHP, AJAX, MySQL -
+
+
+                        </p>
+
+                        <h3>GitHub Repo</h3>
+                        <a href="https://github.com/isoon5/US-Accidents-Smart-Visualizer" target="_blank">
+                            <i class="fab fa-github" style="font-size: 35px;">GitHub</i>
+                        </a>
+
+
+                        <br>
+
+                        <a href="https://github.com/isoon5/US-Accidents-Smart-Visualizer" target="_blank">
+
+                            <h3>Documentation <i class="fas fa-code"></i></h3>
+
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </main>
+
         <footer>
             <p>Copyright ©</p>
             <p></p>
             <p>All rights reserved</p>
         </footer>
-       
+
 
     </body>
-    <script src="./js/myscripts.js"></script> 
-    
-    
-    
+    <script src="./js/myscripts.js"></script>
+
+
+
 
 </html>
