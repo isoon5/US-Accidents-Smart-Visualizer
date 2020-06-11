@@ -189,6 +189,7 @@ function getInput() {
             var options = {
                 title: 'Accidents on different levels of visibility(mi)',
                 legend: 'none',
+                width: '90vw',
                 pieSliceText: 'label',
                 slices: {
                     4: { offset: 0.2 },
@@ -241,8 +242,8 @@ function getInput() {
 
             var options = {
                 title: "Accidents on different weathers",
-                width: '100vw',
-                height: 800,
+                width: '90vw',
+                height: 500,
                 bar: { groupWidth: "50%" },
                 legend: { position: "none" },
                 sliceVisibilityThreshold: 0
@@ -270,7 +271,8 @@ function getInput() {
             var options = {
                 title: 'Accidents on day time/night time',
                 is3D: true,
-                sliceVisibilityThreshold: 0
+                sliceVisibilityThreshold: 0,
+                width: '90vw'
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));

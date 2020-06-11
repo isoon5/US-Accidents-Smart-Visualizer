@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="container-id" style="height: 850px">
+            <div class="container-id">
                 <div class="row">
 
                     <h2 class="section-title">US Car Accident Statistics: What factors cause the most accidents</h2>
@@ -115,7 +115,7 @@
                                 <option value="MS">Mississippi</option>
                                 <option value="MO">Missouri</option>
                                 <option value="MT">Montana</option>
-                                <option value="NE">Mebraska</option>
+                                <option value="NE">Nebraska</option>
                                 <option value="NV">Nevada</option>
                                 <option value="NH">New Hampshire</option>
                                 <option value="NJ">New Jersey</option>
@@ -154,6 +154,7 @@
                             </select>
 
                             <input id="submit" type="button" value="Submit" onclick="getInput()" />
+                            <p>Press 'Submit' too see the chart.</p>
                         </form>
                     </div>
                 </div>
@@ -167,25 +168,24 @@
                 <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
                 <div id="donutchart" style="width: 900px; height: 500px;"></div>
                 <div id="piechart" style="width: 900px; height: 500px;"></div>
-                <div id="columnchart_values" style="width: 100vw; height: 300px;"></div>
-
-
-
-
+                <div id="columnchart_values"xx></div>
             </div>
 
-
-
-
-
-    </main>
-
-    <footer>
-        <p>Copyright ©</p>
-        <p></p>
-        <p>All rights reserved</p>
-    </footer>
 </body>
+
+
+
+<footer>
+    <p>Copyright ©</p>
+    <p></p>
+    <p>All rights reserved</p>
+</footer>s
+
+
+
+
+
+</main>
 
 
 

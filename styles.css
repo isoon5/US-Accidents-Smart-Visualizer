@@ -333,6 +333,9 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
         height: 380px;
         width: 100vw;
     }
+    html body div#topic1.section div.container-about {
+        height: 950px;
+    }
     #topic2>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>p:nth-child(1) {
         font-size: 17px;
         padding-top: 10px;
@@ -347,6 +350,9 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
     }
     .topic-landing-page>img:nth-child(1) {
         width: 110vw;
+    }
+    html body div#topic1.section div.container-about div.row div#column-text a i.fab.fa-github {
+        margin-left: 44vw;
     }
 }
 
@@ -439,6 +445,9 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
     }
     html body main div#topic1.section div.container div#context.row div#column-text ul {
         font-size: 16px;
+    }
+    html body div#topic1.section div.container-about div.row div#column-text a i.fab.fa-github {
+        margin-left: 42vw;
     }
 }
 
@@ -592,6 +601,12 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
     html body main div#topic2.section div.container-id div.buttons a#pie-btn-png {
         margin-left: 12vw;
     }
+    html body div#topic1.section div.container-about div.row div#column-text a i.fab.fa-github {
+        margin-left: 38vw;
+    }
+    html body div#topic1.section div.container-about {
+        height: 1200px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -649,10 +664,14 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
         display: flex;
         flex-direction: column;
     }
+    html body main div#topic2.section div.container-id {
+        height: 1000px;
+    }
 }
 
 @media screen and (max-width: 550px) {
     html body main div#topic1.section a#top-btn,
+    html body main div#topic1.section div.buttons a#geo-btn-png,
     html body main div#topic2.section div.container-id div.buttons a#pie-btn-png {
         margin-left: 0vw;
     }
@@ -731,11 +750,14 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
     html body main div#topic1.section div.container div#context.row div#column-text ul {
         font-size: 14px;
     }
+    html body div#topic1.section div.container-about div.row div#column-text a i.fab.fa-github {
+        margin-left: 33vw;
+    }
 }
 
 @media screen and (max-width: 380px) {
     #chart_div {
-        margin-top: 50vh;
+        margin-top: 30vh;
     }
     html body main div#topic1.section div.container {
         height: 550px;
@@ -744,11 +766,17 @@ div.container:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p:nth-child(1) {
     html body main div#topic2.section div.container {
         height: 750px;
     }
+    html body div#topic1.section div.container-about {
+        height: 1300px;
+    }
 }
 
 @media screen and (max-width: 300px) {
     html body main div#topic2.section div.container div.row div#column-text p {
         font-size: 14px;
+    }
+    html body div#topic1.section div.container-about div.row div#column-text a i.fab.fa-github {
+        margin-left: 30vw;
     }
 }
 
@@ -833,6 +861,10 @@ div.container:nth-child(4)>div:nth-child(2)>div:nth-child(1)>ul:nth-child(2) {
 
 html body main div#topic1.section div.container div#chart_div2 img {
     display: none;
+}
+
+.container-id {
+    height: 900px;
 }
 
 
